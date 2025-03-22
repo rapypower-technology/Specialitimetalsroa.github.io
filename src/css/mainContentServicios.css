@@ -1,0 +1,54 @@
+/* Hero Section */
+.services {
+    min-height: 1vh;
+    text-align: center;
+    padding: 10px 5%;
+    background: var(--background-color-02);
+    color: var(--color-01);
+    position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services h2 {
+    font-size: 4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: -1px;
+    position: relative;
+
+}
+.services h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--bottom-background-color-01);
+    border-radius: 2px;
+}
+.services h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--bottom-color-01);
+    border-radius: 2px;
+    animation: sliders 2s infinite;
+}
+/* Animaciones */
+@keyframes sliders {
+    0% { left: 45%; }
+    50% { left: 55%; }
+    100% { left: 45%; }
+}

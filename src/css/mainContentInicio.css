@@ -1,0 +1,300 @@
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    text-align: center;
+    padding: 150px 5%;
+    background: var(--background-color-01);
+    color: var(--color-01);
+    position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: -1px;
+    position: relative;
+
+}
+.hero h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--bottom-background-color-01);
+    border-radius: 2px;
+}
+.hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background: var(--bottom-color-01);
+    border-radius: 2px;
+    animation: sliders 2s infinite;
+}
+/* Animaciones */
+@keyframes sliders {
+    0% { left: 45%; }
+    50% { left: 55%; }
+    100% { left: 45%; }
+}
+
+.hero-subtitle {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    color: rgba(255,255,255,0.9);
+    max-width: 800px;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease 0.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        left: -250px; /* Inicia fuera de la pantalla */
+        opacity: 0;
+    }
+    to {
+        left: 80px; /* Llega a su posición final */
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToLeft {
+    from {
+        left: 80px; /* Posición final */
+        opacity: 1;
+    }
+    to {
+        left: -250px; /* Se oculta fuera de la pantalla */
+        opacity: 0;
+    }
+}
+
+.hero-img-left {
+    position: absolute;
+    left: 100px; /* Comienza fuera de la pantalla */
+    top: 13%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    opacity: 0.5; /* Se ve con transparencia */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    z-index: 1;
+    rotate: 25deg;
+    border-radius: 25%;
+}
+
+/* Clase que oculta la imagen cuando se hace scroll */
+.scrolled .hero-img-left {
+    animation: slideOutToLeft 1s ease-out forwards;
+    
+}
+.hero-img-right {
+    position: absolute;
+    right: 100px; /* Comienza fuera de la pantalla */
+    top: 13%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    opacity: 0.5; /* Se ve con transparencia */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    z-index: 1;
+    rotate: -25deg;
+    border-radius: 25%;
+}
+
+/* Clase que oculta la imagen cuando se hace scroll */
+.scrolled .hero-img-right {
+    animation: slideOutToLeft 1s ease-out forwards;
+    
+}
+
+/* Grid de Servicios */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease 0.4s;
+    animation-fill-mode: both;
+}
+
+/* Tarjeta de servicio */
+.service-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover con glow */
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Íconos animados */
+.service-card .material-icons {
+    width: 80%;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--color-white);
+    border-radius: 25%;
+    transition: transform 0.4s ease-in-out, color 0.3s ease-in-out;
+}
+
+.service-card:hover .material-icons {
+    transform: scale(1.2) rotate(360deg);
+    color: #f8c471; /* Color vibrante */
+}
+
+/* Títulos */
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--color-white);
+}
+
+/* Descripción */
+.service-card p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+/* Animación de entrada escalonada */
+@keyframes fadeInGrid {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de entrada para cada tarjeta */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3.5em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px)  {
+    .hero {
+        padding: 160px 5%;
+
+    }
+    
+    .hero h1 {
+        font-size: 2.8em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3em;
+    }
+
+    .hero-img-left {
+        position: absolute;
+        left: 100px; /* Comienza fuera de la pantalla */
+        top: 7%;
+        transform: translateY(-50%);
+        width: 200px;
+        height: auto;
+        opacity: 0.2 !important; /* Se ve con transparencia */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        z-index: 1;
+        rotate: 0deg;
+        border-radius: 25%;
+    }
+    
+
+    .hero-img-right {
+        position: absolute;
+        right: 100px; /* Comienza fuera de la pantalla */
+        top: 7%;
+        transform: translateY(-50%);
+        width: 200px;
+        height: auto;
+        opacity: 0.2 !important
+        ; /* Se ve con transparencia */
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+        z-index: 1;
+        rotate: 0deg;
+        border-radius: 25%;
+    }
+
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+    
+  
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2em;
+    }
+    .service-card .material-icons {
+        font-size: 36px;
+    }
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+

@@ -1,0 +1,127 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section,marquee {
+	display: block;
+}
+body {
+	line-height: 1;
+	overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS GLOBAL*/
+*{ 
+    --color-01:#ffff ;
+    --color-02:#844c1c ;
+    --background-color-01:#5e3e1b   ;
+    --background-color-02:#0c0506  ;
+    --bottom-background-color-01: #FFD700  ;
+    --bottom-color-01: #9e7c2c;
+    --bottom-color-02: #7c7c6c ;
+    --box-shadow-01:rgba(255, 215, 0, 0.3);
+    --box-shadow-02:rgba(124, 124, 108, 0.3);
+    --border-01:#ffff ;
+
+    scroll-behavior: smooth;  
+    font-family: PermanentMarker;  
+    padding: 0; margin: 0; text-decoration: none; border: 0; box-sizing: border-box; 
+    text-decoration:none; list-style-type:none; font-size: 1.125rem; 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*CONTAINER GLOBAL*/
+.rpt_container_section_primary ,
+.rpt_container_section_second ,
+.rpt_container_section_third ,
+.rpt_container_section_fourth ,
+.rpt_container_section_fifth ,
+.rpt_container_section_sixth ,
+.rpt_container_section_seventh ,
+.rpt_container_section_eighth ,
+.rpt_container_section_nineth
+.rpt_container_section_tenth,
+.rpt_container_section_eleventh,
+.rpt_container_section_twelveth{
+    width: 100%;
+    min-height:60vh !important;
+	position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.rpt_container_section_primary ,
+.rpt_container_section_third ,
+.rpt_container_section_fifth {
+    background-color: var(--section-background-color-04);
+}
+.darkmode .rpt_container_section_primary ,
+.darkmode .rpt_container_section_third ,
+.darkmode .rpt_container_section_fifth {
+    background-color: var(--section-background-color-02);
+}
+
+.rpt_container_section_second ,
+.rpt_container_section_fourth ,
+.rpt_container_section_sixth {
+    background-color: var(--section-background-color-08);
+}
+.darkmode .rpt_container_section_second ,
+.darkmode .rpt_container_section_fourth ,
+.darkmode .rpt_container_section_sixth{
+    background-color: var(--section-background-color-06);
+}
+
+.rpt_container_section_seventh ,
+.rpt_container_section_nineth ,
+.rpt_container_section_eleventh{
+    background-color: var(--section-background-color-05);
+}.darkmode .rpt_container_section_seventh ,
+.darkmode.rpt_container_section_nineth ,
+.rpt_container_section_eleventh{
+    background-color: var(--section-background-color-06);
+}
+
+.rpt_container_section_eighth ,
+.rpt_container_section_tenth ,
+.rpt_container_section_twelveth{
+    background-color: var(--section-background-color-07);
+}
+.darkmode .rpt_container_section_eighth ,
+.darkmode .rpt_container_section_tenth ,
+.darkmode .rpt_container_section_twelveth{
+    background-color: var(--section-background-color-08);
+}

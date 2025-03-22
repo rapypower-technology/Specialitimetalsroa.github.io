@@ -1,0 +1,138 @@
+/* Estilos generales para la tabla de pestañas */
+.rpt_table_with_tabs_primary {
+    width: 1200px;
+    max-width: 80%;
+    margin: 30px auto;
+    position: relative;
+}
+
+/* Estilos para las pestañas */
+ul.tabs_01,
+ul.tabs_02,
+ul.tabs_03,
+ul.tabs_04,
+ul.tabs_05,
+ul.tabs_06,
+ul.tabs_07 {
+    width: 100%;
+    background: var(--background-color-02);;
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+ul.tabs_01 li,
+ul.tabs_02 li,
+ul.tabs_03 li,
+ul.tabs_04 li,
+ul.tabs_05 li,
+ul.tabs_06 li,
+ul.tabs_07 li {
+    width: 50%;
+}
+
+ul.tabs_01 li a,
+ul.tabs_02 li a,
+ul.tabs_03 li a,
+ul.tabs_04 li a,
+ul.tabs_05 li a,
+ul.tabs_06 li a,
+ul.tabs_07 li a {
+    color: var(--color-02);
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+
+/* Estilos para los iconos en las pestañas */
+.tabs_01 li a i,
+.tabs_02 li a i,
+.tabs_03 li a i,
+.tabs_04 li a i,
+.tabs_05 li a i,
+.tabs_06 li a i,
+.tabs_07 li a i {
+    color: var(--icons-color-01);
+}
+
+/* Estilos para las pestañas activas */
+.tab-link.active i {
+    color: var(--icons-color-02) !important; /* Color del icono en la pestaña activa */
+}
+
+.tab-link.active {
+    background: var(--background-color-01); /* Cambiado a --background-color-01 */
+    color: var(--color-01) !important; /* Color del texto en la pestaña activa */
+}
+
+/* Espaciado para el texto de las pestañas */
+ul.tabs li a .tab-text {
+    margin-left: 8px;
+}
+
+/* Estilos para las secciones de contenido */
+.rpt_sections_table_with_tabs_primary {
+    width: 100%;
+    background: var(--background-color-01);
+    margin: auto;
+}
+
+.rpt_sections_table_with_tabs_primary article {
+    padding: 30px;
+}
+
+.rpt_sections_table_with_tabs_primary article p {
+    text-align: justify;
+    font-family: Parrafop1;
+    font-size: clamp(1rem, 1.4rem, 5rem);
+    padding: 5px;
+    color: var(--color-01);
+}
+
+.darkmode .rpt_sections_table_with_tabs_primary article p {
+    color: var(--color-04);
+}
+
+/* ———– Tablets ———– */
+@media (max-width: 768px) {
+    .rpt_table_with_tabs_primary {
+        width: 750px;
+    }
+    ul.tabs_01,
+    ul.tabs_02,
+    ul.tabs_03,
+    ul.tabs_04,
+    ul.tabs_05,
+    ul.tabs_06,
+    ul.tabs_07,
+    .rpt_sections_table_with_tabs_primary {
+        width: 70%;
+    }
+    .rpt_sections_table_with_tabs_primary article p {
+        font-family: Parrafop2;
+        font-size: clamp(1rem, 1.4rem, 5rem);
+    }
+}
+
+/* ———– Dispositivos móviles ———– */
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) {
+    .rpt_table_with_tabs_primary {
+        width: 450px;
+    }
+    ul.tabs_01,
+    ul.tabs_02,
+    ul.tabs_03,
+    ul.tabs_04,
+    ul.tabs_05,
+    ul.tabs_06,
+    ul.tabs_07,
+    .rpt_sections_table_with_tabs_primary {
+        width: 100%;
+    }
+    .rpt_sections_table_with_tabs_primary article p {
+        font-family: Parrafop3;
+        font-size: clamp(1rem, 1.4rem, 5rem);
+    }
+}

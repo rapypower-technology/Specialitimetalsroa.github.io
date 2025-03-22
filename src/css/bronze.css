@@ -1,0 +1,248 @@
+
+.rpt_container_section_second{
+	width: 100%;
+	min-height: 40vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+	background-image: url('../img/rpt_products/bronze.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position:relative; 
+    background-attachment:fixed;
+    z-index: 10;
+}
+.rpt_container_section_second::before{
+	content: ""; 
+	width: 50%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	background-color: var( --background-color-02-01);
+	/*border-bottom-right-radius: 550px; */
+}
+.darkmode .rpt_container_section_second::before{
+    background-color: var(--background-color-03-01) !important;
+}   
+.home-services-ifo{
+    width: 50%;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.home-services-ifo h2{
+    font-family: Tituloh2;
+    font-size: clamp(2rem,2.5rem,5rem);
+    text-align: center;
+    color: var(--color-01);
+}
+.home-services-ifo h2 b{
+    margin: 10px;
+    color: var(--color-03);
+}
+.darkmode .home-services-ifo h2 b{
+    color: var(--color-01);
+}
+
+.rpt_container_services{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.rpt_container_table_services{
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.rpt_container_info_services{
+    width: 40%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.rpt_container_info_services h5{
+    font-family: Tituloh5;
+    font-size: clamp(2rem,2.5rem,5rem);
+    text-align: center;
+    color: var(--color-02);
+    margin: 5px;
+}
+.rpt_container_info_services img{
+    width: 60%;
+    min-height: 250px;
+    border-radius: 25px;
+    box-shadow: 2rem 1.5rem 1rem #be000044 ;
+
+}
+
+
+
+
+.rpt_container_section_fourth{
+	width: 100%;
+	min-height: 40vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+	background-image: url('../img/rpt_body/Body-Metales-03.jpeg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+	position:relative;
+    z-index: 10;
+}
+.rpt_container_section_fourth::before{
+	content: ""; 
+	width: 50%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	right: 0; 
+	background-color: var( --background-color-02-01);
+	/*border-bottom-right-radius: 550px; */
+}
+.darkmode .rpt_container_section_fourth::before{
+    background-color: var(--background-color-03-01) !important;
+}  
+.home-services-cotact{
+    width: 50%;
+    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.home-services-cotact h3{
+    font-family: Tituloh3;
+    font-size: clamp(2rem,2.5rem,5rem);
+    text-align: center;
+    color: var(--color-01);
+}
+.home-services-cotact h3 b{
+    margin: 10px;
+    color: var(--color-03);
+}
+.darkmode .home-services-cotact h3 b{
+    margin: 10px;
+    color: var(--color-01);
+}
+.home-services-cotact a{
+    font-family: Enlaces2;
+    font-size: clamp(2rem,0.8rem,5rem);
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--background-color-05);
+    color:var(--color-01);
+    border-radius: 25PX;
+}
+.darkmode .home-services-cotact a{
+    background-color: var(--background-color-04);
+    color:var(--color-02);
+}
+
+
+
+
+
+
+
+                    /* ———– Tablets ———– */
+                    /* cambios css para modo vertical y horizontal */
+                    @media only screen and (min-width: 481px) and (max-width: 1000px){
+                        /* inserta aquí tu código */
+                        .rpt_container_table_services{
+                            width: 70%;
+                            min-height: 100vh;
+                            display: flex;
+                            justify-content: center;
+                            place-items: center;
+                        }
+                        .rpt_container_info_services{
+                            width: 30%;
+                            min-height: 100vh;
+                            display: grid;
+                            place-content: center;
+                            place-items: center;
+                        }
+                    }
+	
+	
+	
+	
+					/* ———– dispositivos móviles ———– */
+					/* cambios css para modo vertical y horizontal */
+                    @media (max-width: 768px) {
+                        /* inserta aquí tu código */
+					
+                        .rpt_container_services{
+                            width: 100%;
+                            min-height: 100vh;
+                            display: grid;
+                            place-content: center;
+                            place-content: center;
+                        }
+                        .rpt_container_table_services{
+                            width: 100%;
+                            min-height: 40vh;
+                            display: flex;
+                            justify-content: center;
+                            place-items: center;
+                        }
+                        .rpt_container_info_services{
+                            width: 100%;
+                            min-height: 20vh;
+                            display: grid;
+                            place-content: center;
+                            place-items: center;
+                        }
+
+
+                        .rpt_container_section_fourth::before{
+                            content: ""; 
+                            width: 70%; 
+                            height: 100%; 
+                            position: absolute; 
+                            top: 0; 
+                            right: 0; 
+                            background-color: var( --background-color-02-01);
+                            /*border-bottom-right-radius: 550px; */
+                        }
+                        .home-services-cotact{
+                            width: 70%;
+                            min-height: 100vh;
+                            position: absolute;
+                            right: 0;
+                            z-index: 0;
+                            display: grid;
+                            place-content: center;
+                            place-items: center;
+                        }
+                        .home-services-cotact h3{
+                            font-family: Tituloh3;
+                            font-size: clamp(1rem,1.4rem,5rem);
+                            text-align: center;
+                            color: var(--color-01);
+                        }
+                        .home-services-cotact a{
+                            font-family: Enlaces2;
+                            font-size: clamp(1rem,0.8rem,5rem);
+                            margin: 10px;
+                            padding: 10px;
+                            background-color: var(--background-color-05);
+                            color:var(--color-01);
+                            border-radius: 25PX;
+                        }
+					}
