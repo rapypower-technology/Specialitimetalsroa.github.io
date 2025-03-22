@@ -1,8 +1,11 @@
+
+
+
 // js/mainContentContactanos.js
 function createServicebronze() {
   const section = document.createElement('section');
   section.innerHTML = `
-      <section class="rpt_container_section_second">
+      <section class="rpt_container_section_second rpt_container_section_second_01">
           <nav class="home-services-ifo">
               <h2>
                   <b>
@@ -10,8 +13,11 @@ function createServicebronze() {
                   </b>
               </h2>
           </nav>
+
+
+          
       </section>
-      <section class="rpt_container_section_third">
+      <section class="rpt_container_section_third rpt_container_section_third_01">
           <nav class="rpt_container_services">
               <nav class="rpt_table_with_tabs_primary">
                   <ul class="tabs_01">
@@ -77,26 +83,16 @@ function createServicebronze() {
                       </article>
                   </section>
               </nav>
-              <nav class="rpt_container_info_services js-scroll fade-in-right">
+              <nav class="rpt_container_info_services">
                   <h5>
                       Bronce
                   </h5>
-                  <img src="src/img/rpt_products/bronze2.jpg" alt="">
+                  <img src="src/img/services/bronze2.webp" alt="Metales Especiales" class="hero-img-left-table">
+              
               </nav>
           </nav>
       </section>
-      <section class="rpt_container_section_fourth">
-          <nav class="home-services-cotact">
-              <h3 class="js-scroll fade-in-left">
-                  <b>
-                      Contacta con nosotros
-                  </b>
-              </h3>
-              <a class="js-scroll fade-in-right" href="https://wa.me/5541143981?text=Me%20interesa%20los%20productos%20de%20Bronce" target="_blank">
-                  Pide tu cotización
-              </a>
-          </nav>
-      </section>
+     
   `;
 
   // Agregar funcionalidad para las pestañas
@@ -120,6 +116,8 @@ function createServicebronze() {
           targetArticle.style.display = 'block';
       });
   });
+
+  
 
   return section;
 }

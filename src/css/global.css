@@ -46,8 +46,14 @@ table {
 *{ 
     --color-01:#ffff ;
     --color-02:#844c1c ;
+    --color-03:#FFD700 ;
+    --color-04:#FFD700 ;
+    --color-05:#FFC107 ;
+    --color-06: #DAA520;
     --background-color-01:#5e3e1b   ;
     --background-color-02:#0c0506  ;
+    --background-color-03: rgba(94, 62, 27, 0.5);
+
     --bottom-background-color-01: #FFD700  ;
     --bottom-color-01: #9e7c2c;
     --bottom-color-02: #7c7c6c ;

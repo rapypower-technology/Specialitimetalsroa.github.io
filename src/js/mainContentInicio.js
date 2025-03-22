@@ -1,23 +1,23 @@
 window.addEventListener("scroll", function () {
-  const leftImage = document.querySelector(".hero-img-left");
-  const rightImage = document.querySelector(".hero-img-right");
-  const scrollPosition = window.scrollY;
+    const leftImage = document.querySelector(".hero-img-left");
+    const rightImage = document.querySelector(".hero-img-right");
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > 200) {
+        leftImage.style.transform = "translateX(-100%)"; // Se desliza hacia la izquierda
+        leftImage.style.opacity = "0"; // Se desvanece
+        
+        rightImage.style.transform = "translateX(100%)"; // Se desliza hacia la derecha
+        rightImage.style.opacity = "0"; // Se desvanece
+    } else {
+        leftImage.style.transform = "translateX(0)"; // Regresa desde la izquierda
+        leftImage.style.opacity = "0.5"; // Se muestra con transparencia
+        
+        rightImage.style.transform = "translateX(0)"; // Regresa desde la derecha
+        rightImage.style.opacity = "0.5"; // Se muestra con transparencia
+    }
+  });
   
-  if (scrollPosition > 200) {
-      leftImage.style.transform = "translateX(-100%)"; // Se desliza hacia la izquierda
-      leftImage.style.opacity = "0"; // Se desvanece
-      
-      rightImage.style.transform = "translateX(100%)"; // Se desliza hacia la derecha
-      rightImage.style.opacity = "0"; // Se desvanece
-  } else {
-      leftImage.style.transform = "translateX(0)"; // Regresa desde la izquierda
-      leftImage.style.opacity = "0.5"; // Se muestra con transparencia
-      
-      rightImage.style.transform = "translateX(0)"; // Regresa desde la derecha
-      rightImage.style.opacity = "0.5"; // Se muestra con transparencia
-  }
-});
-
 
 // js/mainContentInicio.js
 function createMainContentInicio() {

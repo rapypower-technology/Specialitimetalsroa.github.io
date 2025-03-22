@@ -1,0 +1,109 @@
+// js/mainContentContactanos.js
+function createServiceCopper() {
+    const section = document.createElement('section');
+    section.innerHTML = `
+    <section class="rpt_container_section_second rpt_container_section_second_03">
+        <nav class="home-services-ifo">
+            <h2>
+                <b>
+                    Cobre
+                </b>
+            </h2>
+        </nav>
+    </section>
+    <section class="rpt_container_section_third rpt_container_section_third_03">
+        <nav class="rpt_container_services">
+            <nav class="rpt_table_with_tabs_primary">
+                <ul class="tabs_01">
+                    <li>
+                        <a href="#tabs1" class="tab-link active">
+                            <i class="fa fa-star"></i>&nbsp;
+                            <span class="tab-text" id="rpt_main_03">
+                                Caracter&iacute;sticas
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tabs2" class="tab-link">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;
+                            <span class="tab-text" id="rpt_main_04">
+                                Aleaciones
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <section class="rpt_sections_table_with_tabs_primary">
+                      <article class="article_01" id="tabs1">
+                          <p id="rpt_main_05">
+                              Debido a su alta conductividad t&eacute;rmica, excelente dureza y resistencia a altas temperaturas, las aleaciones de cobre se utilizan frecuentemente para aplicaciones que requieren alta conductividad el&eacute;ctrica y resistencia mec&aacute;nica superior.
+                          </p>
+                          <p id="rpt_main_06">
+                              Es su fuerza la que hace que esta aleaci&oacute;n sea una gran opci&oacute;n cuando se requiere resistencia al desgaste y a la corrosi&oacute;n, adem&aacute;s de excelentes propiedades para rodamientos.
+                          </p>
+                      </article>
+                      <article class="article_01" id="tabs2" style="display: none;">
+                          <p id="rpt_main_07">
+                              Cobre Clase II. Cobre Cromo Zirconio (C-18150). Por resistencia, generalmente utilizado en la fabricaci&oacute;n de electrodos para la soldadura, el zirconio permite al electrodo no pegarse al soldar l&aacute;minas galvanizadas.
+                          </p>
+                          <p id="rpt_main_08">
+                              Cobre Clase III. Cobre Berilio (C-17510). Esta clase ofrece una excelente resistencia y dureza, de alta conductividad t&eacute;rmica y el&eacute;ctrica, adem&aacute;s de resistencia a la tensi&oacute;n.
+                          </p>
+                          <p id="rpt_main_09">
+                              Cobre Clase IV. Cobre Berilio (C-172). Cobre de aleaci&oacute;n al 2% de berilio. Ofrece una alta resistencia y dureza comparada con otras aleaciones, caracter&iacute;sticas comparadas con el acero y de propiedades anti-corrosi&oacute;n.
+                          </p>
+                          <p id="rpt_main_10">
+                              Cobre Electrolítico (C-1110). De excelente conductividad el&eacute;ctrica y t&eacute;rmica, es maleable, resistente a la corrosi&oacute;n, antimagn&eacute;tico, antichispa y con propiedades criog&eacute;nicas.
+                          </p>
+                          <p id="rpt_main_11">
+                              Cobre Fosforoso (C-51000). Con una excelente conductividad el&eacute;ctrica y t&eacute;rmica, es maleable, resistente a la corrosi&oacute;n, antimagn&eacute;tico, antichispa y con propiedades criog&eacute;nicas.
+                          <p>
+
+                              <span id="rpt_main_15">
+                                  ¿Buscas alguna aleaci&oacute;n distinta? Escr&iacute;benos al correo  
+                              </span>
+                              <strong>
+                                  ventas@metalesespecialesmexico.com.mx
+                              </strong>
+                          </p>
+                      </article>
+                  </section>
+            </nav>
+            <nav class="rpt_container_info_services ">
+                <h5>
+                    Cobre
+                </h5>
+                <img src="src/img/services/copper2.webp" alt="Metales Especiales" class="hero-img-left-table">
+            </nav>
+        </nav>
+    </section>
+   
+`;  
+
+
+// Agregar funcionalidad para las pestañas
+const tabs = section.querySelectorAll('.tabs_01 li a');
+const articles = section.querySelectorAll('.rpt_sections_table_with_tabs_primary article');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+
+        // Remover la clase 'active' de todas las pestañas
+        tabs.forEach(t => t.classList.remove('active'));
+        // Ocultar todos los artículos
+        articles.forEach(article => article.style.display = 'none');
+
+        // Agregar la clase 'active' a la pestaña seleccionada
+        this.classList.add('active');
+        // Mostrar el artículo correspondiente
+        const targetId = this.getAttribute('href');
+        const targetArticle = section.querySelector(targetId);
+        targetArticle.style.display = 'block';
+    });
+});
+    return section;
+  }
+  
+  // Exponer la función al ámbito global
+  window.createServiceCopper = createServiceCopper;
+  

@@ -14,10 +14,12 @@ function loadScript(url) {
 async function createMainContentServicios() {
   try {
       await loadScript('src/js/bronze.js');
-      await loadScript('src/js/Brass.js');
-      await loadScript('src/js/Copper.js');
-      await loadScript('src/js/Aluminum.js');
-
+      await loadScript('src/js/brass.js');
+      await loadScript('src/js/copper.js');
+      await loadScript('src/js/aluminum.js');
+      await loadScript('src/js/stainlessSteel.js');
+      await loadScript('src/js/carbonSteel.js');
+      await loadScript('src/js/engineeringPlastics.js');
       const servicios = document.createElement('section');
       servicios.innerHTML = `
       <section id="servicios" class="services">
@@ -31,7 +33,9 @@ async function createMainContentServicios() {
       servicios.appendChild(createServiceBrass());
       servicios.appendChild(createServiceCopper());
       servicios.appendChild(createServiceAluminum());
-
+      servicios.appendChild(createServicestainlessSteel());
+      servicios.appendChild(createServicecarbonSteel());
+      servicios.appendChild(createServiceengineeringPlastics());
       return servicios;
   } catch (error) {
       console.error('Error loading service scripts:', error);

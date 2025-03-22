@@ -1,0 +1,252 @@
+.rpt_container_section_second{
+	width: 100%;
+	min-height: 40vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	    position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
+
+    background-attachment:fixed;
+    z-index: 10;
+}
+.rpt_container_section_second_01{
+	background-image: url('../img/services/bronze.webp');
+
+}
+.rpt_container_section_second_02{
+	background-image: url('../img/services/brass.webp');
+
+}
+.rpt_container_section_second_03{
+	background-image: url('../img/services/copper.webp');
+
+}
+.rpt_container_section_second_04{
+	background-image: url('../img/services/aluminum.webp');
+
+}
+.rpt_container_section_second_05{
+	background-image: url('../img/services/stainlessSteel.webp');
+
+}
+.rpt_container_section_second_06{
+    background-image: url('../img/services/carbonSteel.webp');
+
+}
+.rpt_container_section_second_07{
+    background-image: url('../img/services/engineeringPlastics.webp');
+
+}
+
+.rpt_container_section_second::before{
+	content: ""; 
+	width: 50%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	background-color: var( --background-color-03);
+	/*border-bottom-right-radius: 550px; */
+}
+.home-services-ifo{
+    width: 50%;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+@keyframes cambioColorh2 {
+    0% { color: var(--color-04); }
+    50% { color: var(--color-05); }
+    100% { color: var(--color-06); }
+}
+
+.home-services-ifo h2{
+    font-family: Tituloh2;
+    font-size: clamp(4rem,2.5rem,5rem);
+    text-align: center;
+    color: var(--color-01);
+
+}
+.home-services-ifo h2 b{
+    margin: 10px;
+    color: var(--color-01);
+    animation: cambioColorh2 3s infinite alternate;
+
+}
+
+.rpt_container_services{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.rpt_container_table_services{
+    width: 60%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.rpt_container_info_services{
+    width: 40%;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    margin: auto;
+}
+@keyframes cambioColor {
+    0% { color: #c56f18; opacity: 1; }  /* Dorado oscuro */
+    50% { color: #585858; opacity: 0.6; } /* Gris oscuro (evita perderse en el fondo negro) */
+    100% { color: #FFD700; opacity: 1; } /* Dorado vibrante */
+}
+
+@keyframes brillo {
+    0% { text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5); }
+    100% { text-shadow: 0px 0px 30px rgba(255, 215, 0, 1); }
+}
+
+.rpt_container_info_services h5 {
+    font-family: "Tituloh5", sans-serif;
+    font-size: clamp(2rem, 4rem, 6rem);
+    text-align: center;
+    color: var(--color-02);
+    animation: cambioColor 5s infinite alternate ease-in-out, brillo 3s infinite alternate ease-in-out;
+    transition: opacity 1.5s ease-in-out;
+    margin: 5px;
+    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5); /* Refuerzo del brillo */
+}
+
+
+.rpt_container_info_services img{
+    width: 60%;
+    min-height: 250px;
+    border-radius: 25px;
+    box-shadow: 2rem 1.5rem 1rem #be000044 ;
+
+}
+
+
+
+.rpt_container_section_third{
+    width: 100%;
+    min-height: 40vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position:relative; 
+    background-attachment:fixed;
+    z-index: 10;
+}
+
+.rpt_container_section_third_01{
+    background-image: url('../img/services/bronze.webp');
+
+}
+.rpt_container_section_third_02{
+    background-image: url('../img/services/brass.webp');
+
+}
+.rpt_container_section_third_03{
+    background-image: url('../img/services/copper.webp');
+
+}
+.rpt_container_section_third_04{
+    background-image: url('../img/services/aluminum.webp');
+
+}
+.rpt_container_section_third_05{
+    background-image: url('../img/services/stainlessSteel.webp');
+
+}
+.rpt_container_section_third_06{
+    background-image: url('../img/services/carbonSteel.webp');
+
+}
+.rpt_container_section_third_07{
+    background-image: url('../img/services/engineeringPlastics.webp');
+
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Ajuste de secciones con fondo fijo para evitar problemas en móviles */
+    .rpt_container_section_second,
+    .rpt_container_section_third {
+        min-height: 30vh;
+        background-attachment: scroll; /* Cambiado a scroll para evitar problemas de rendimiento */
+    }
+    .rpt_container_section_second::before{
+        content: ""; 
+        width: 70%; 
+        height: 100%; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        background-color: var( --background-color-03);
+        /*border-bottom-right-radius: 550px; */
+    }
+    /* Para disponer los servicios en bloque en lugar de flex */
+    .rpt_container_services {
+        display: block;
+    }
+
+    /* Contenedor de información y servicio en disposición vertical */
+    .home-services-ifo {
+        width: 70%;
+        min-height: 100vh;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+        display: grid;
+        place-content: center;
+        place-items: center;
+    }
+
+    .rpt_container_info_services {
+        width: 90%;
+        min-height: auto;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .rpt_container_table_services {
+        width: 90%;
+        min-height: auto;
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    /* Ajuste de tamaños de fuente para mejor legibilidad */
+    .home-services-ifo h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+    }
+
+    .rpt_container_info_services h5 {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        text-shadow: none; /* Se elimina la sombra para mejorar la legibilidad en pantallas pequeñas */
+    }
+
+    /* Ajuste de imágenes para ocupar mayor parte del ancho */
+    .rpt_container_info_services img {
+        width: 90%;
+        min-height: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
