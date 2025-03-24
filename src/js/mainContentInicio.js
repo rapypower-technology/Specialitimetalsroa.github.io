@@ -23,6 +23,7 @@ window.addEventListener("scroll", function () {
 function createMainContentInicio() {
     const section = document.createElement('inicio');
     section.innerHTML = `
+    
         <section id="inicio" class="hero">
             <h1>
             Materiales de Alta Calidad para la Industria

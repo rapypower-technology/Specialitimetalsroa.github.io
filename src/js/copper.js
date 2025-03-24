@@ -2,8 +2,8 @@
 function createServiceCopper() {
     const section = document.createElement('section');
     section.innerHTML = `
-    <section class="rpt_container_section_second rpt_container_section_second_03">
-        <nav class="home-services-ifo">
+    <section class="rpt_container_section_second rpt_container_section_second01 rpt_container_section_second_03">
+        <nav class="home-services-ifo-01">
             <h2>
                 <b>
                     Cobre

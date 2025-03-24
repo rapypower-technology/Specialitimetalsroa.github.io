@@ -1,0 +1,260 @@
+
+/*Acerca de */
+/* Variables globales */
+:root {
+    --color-primary: #007BFF;
+    --color-secondary: #6C757D;
+    --color-accent: #28A745;
+    --color-dark: #343A40;
+    --color-light: #F8F9FA;
+    --color-white: #FFFFFF;
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, #0056b3 100%);
+    --gradient-hover: linear-gradient(135deg, #0056b3 0%, var(--color-primary) 100%);
+    --shadow-base: 0 10px 30px rgba(0,0,0,0.1);
+    --shadow-hover: 0 20px 40px rgba(0,0,0,0.2);
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Estilos base */
+.about-section {
+    padding: 120px 5%;
+    background: var(--background-color-02);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título principal */
+.about-section h2 {
+    font-size: 3.2em;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    animation: fadeInDown 0.8s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Descripción */
+.about-description {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-description p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    text-align: center;
+}
+
+.about-description p:nth-child(2) { animation-delay: 0.2s; }
+.about-description p:nth-child(3) { animation-delay: 0.4s; }
+
+/* Grid Misión/Visión */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.mission-card, .vision-card {
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-base);
+}
+
+.mission-card:hover, .vision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    background: rgba(255,255,255,0.2);
+}
+
+.mission-card h3, .vision-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mission-card p, .vision-card p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* Sección de Valores */
+.values-section {
+    
+    margin: 80px 0;
+}
+
+.values-section h3 {
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.value-item {
+    padding: 30px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition-base);
+    animation: scaleIn 0.5s ease forwards;
+    opacity: 0;
+    box-shadow: var(--shadow-base);
+}
+
+.value-item:hover {
+    transform: translateY(-5px) scale(1.05);
+    background: rgba(255,255,255,0.2);
+    box-shadow: var(--shadow-hover);
+}
+
+.value-item .material-icons {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.value-item h4 {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+/* Grid de Estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+}
+
+.stat-card {
+    padding: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    box-shadow: var(--shadow-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    background: rgba(255,255,255,0.2);
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.2s; }
+.stat-card:nth-child(2) { animation-delay: 0.4s; }
+.stat-card:nth-child(3) { animation-delay: 0.6s; }
+
+.stat-card h3 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .about-section h2 {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 20px;
+    }
+    
+    .about-section h2 {
+        font-size: 2.5em;
+    }
+    
+    .mission-card, .vision-card {
+        padding: 30px;
+    }
+    
+    .values-section h3 {
+        font-size: 2em;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section h2 {
+        font-size: 2em;
+    }
+    
+    .stat-card h3 {
+        font-size: 2.8em;
+    }
+}
+/*++++++++++++++++++++++++++++++++*/
+

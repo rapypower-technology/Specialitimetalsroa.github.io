@@ -1,8 +1,8 @@
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     text-align: center;
-    padding: 150px 5%;
+    padding: 150px 5% 0 5%;
     background: var(--background-color-01);
     color: var(--color-01);
     position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
@@ -220,7 +220,7 @@
 
 @media (max-width: 768px)  {
     .hero {
-        padding: 160px 5%;
+        padding: 160px 5% 0 5%;
 
     }
     
@@ -246,7 +246,7 @@
         border-radius: 25%;
     }
     
-
+   
     .hero-img-right {
         position: absolute;
         right: 100px; /* Comienza fuera de la pantalla */

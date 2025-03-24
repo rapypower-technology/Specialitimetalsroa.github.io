@@ -5,8 +5,8 @@
 function createServicecarbonSteel() {
     const section = document.createElement('section');
     section.innerHTML = `
-        <section class="rpt_container_section_second rpt_container_section_second_06">
-            <nav class="home-services-ifo">
+        <section class="rpt_container_section_second rpt_container_section_second02 rpt_container_section_second_06">
+            <nav class="home-services-ifo-02">
                 <h2>
                     <b>
                         Acero al Carb&oacute;n

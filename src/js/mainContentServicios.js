@@ -20,12 +20,10 @@ async function createMainContentServicios() {
       await loadScript('src/js/stainlessSteel.js');
       await loadScript('src/js/carbonSteel.js');
       await loadScript('src/js/engineeringPlastics.js');
-      const servicios = document.createElement('section');
+      const servicios = document.createElement('servicios');
       servicios.innerHTML = `
-      <section id="servicios" class="services">
+      <section  class="services">
         <h2>Servicios</h2>
-        
-        
       </section>
         `;
 

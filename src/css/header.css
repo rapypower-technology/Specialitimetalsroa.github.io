@@ -118,9 +118,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .nav {
+        background-color: var(--background-color-03) !important;
+        top: 135px !important;
+        transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
+    }
     .header.scrolled .nav {
-        background-color: var(--background-color-02);
-        top: 72px;
+        background-color: var(--background-color-04) !important;
+        top: 72px !important;
         transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
     }
     .nav {
@@ -155,8 +160,15 @@
         display: block;
         width: 100%;
         padding: 12px 0;
+        color: var(--color-01);
     }
     .menu-toggle {
         display: flex;
+    }
+    .menu-toggle span {
+        background: var(--background-color-02);
+    }
+    .header.scrolled  .menu-toggle span {
+        background: var(--background-color-01);
     }
 }

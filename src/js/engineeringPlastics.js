@@ -5,8 +5,8 @@
 function createServiceengineeringPlastics() {
     const section = document.createElement('section');
     section.innerHTML = `
-        <section class="rpt_container_section_second rpt_container_section_second_07">
-            <nav class="home-services-ifo">
+        <section class="rpt_container_section_second rpt_container_section_second01 rpt_container_section_second_07">
+            <nav class="home-services-ifo-01">
                 <h2>
                     <b>
                         Pl&aacute;sticos de Ingenier&iacute;a

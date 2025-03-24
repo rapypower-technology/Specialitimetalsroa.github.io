@@ -1,14 +1,12 @@
 .rpt_container_section_second{
-	width: 100%;
-	min-height: 40vh;
+
     display: grid;
     place-content: center;
     place-items: center;
 	background-repeat: no-repeat;
-	background-position: center;
 	background-size: cover;
-	    position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
-
+    background-position: center;
+	position: relative; /* Importante para que los elementos absolutos se posicionen respecto a este contenedor */
     background-attachment:fixed;
     z-index: 10;
 }
@@ -40,22 +38,56 @@
     background-image: url('../img/services/engineeringPlastics.webp');
 
 }
-
-.rpt_container_section_second::before{
-	content: ""; 
-	width: 50%; 
-	height: 100%; 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	background-color: var( --background-color-03);
-	/*border-bottom-right-radius: 550px; */
+.rpt_container_section_second {
+    width: 100%;
+    min-height: 40vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 10;
 }
-.home-services-ifo{
-    width: 50%;
+
+/* Estilo base del ::before */
+.rpt_container_section_second::before {
+    content: ""; 
+    width: 40%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    background-color: var(--background-color-05) !important;
+}
+
+/* Impares: ::before a la izquierda */
+.rpt_container_section_second01::before {
+    left: 0;
+    border-bottom-right-radius: 550px;
+}
+
+/* Pares: ::before a la derecha */
+.rpt_container_section_second02::before {
+    right: 0   !important;
+    border-bottom-left-radius: 550px;
+}
+.home-services-ifo-01{
+    width: 30%;
     min-height: 100vh;
     position: absolute;
     left: 0;
+    z-index: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+.home-services-ifo-02{
+    width: 30%;
+    min-height: 100vh;
+    position: absolute;
+    right: 0;
     z-index: 0;
     display: grid;
     place-content: center;
@@ -67,63 +99,72 @@
     100% { color: var(--color-06); }
 }
 
-.home-services-ifo h2{
+.home-services-ifo-01 h2,
+.home-services-ifo-02 h2
+{
     font-family: Tituloh2;
     font-size: clamp(4rem,2.5rem,5rem);
     text-align: center;
     color: var(--color-01);
 
 }
-.home-services-ifo h2 b{
+.home-services-ifo-01 h2 b,
+.home-services-ifo-02 h2 b
+{
     margin: 10px;
     color: var(--color-01);
     animation: cambioColorh2 3s infinite alternate;
 
 }
 
+
 .rpt_container_services{
     width: 100%;
-    min-height: 100vh;
+    min-height: 60vh !important;
     display: flex;
     justify-content: center;
     place-items: center;
+   
 }
 .rpt_container_table_services{
     width: 60%;
-    min-height: 100vh;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     place-items: center;
+    
 }
 .rpt_container_info_services{
     width: 40%;
-    min-height: 100vh;
+    min-height: 70vh;
     display: grid;
     place-content: center;
     place-items: center;
     margin: auto;
 }
 @keyframes cambioColor {
-    0% { color: #c56f18; opacity: 1; }  /* Dorado oscuro */
-    50% { color: #585858; opacity: 0.6; } /* Gris oscuro (evita perderse en el fondo negro) */
-    100% { color: #FFD700; opacity: 1; } /* Dorado vibrante */
+    0% { color: #d4af37; opacity: 1; }  /* Dorado clásico */
+    50% { color: #8c6239; opacity: 0.9; } /* Bronce cálido (más visible que el café) */
+    100% { color: #ffffff; opacity: 1; } /* Blanco puro */
 }
 
 @keyframes brillo {
-    0% { text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5); }
-    100% { text-shadow: 0px 0px 30px rgba(255, 215, 0, 1); }
+    0% { text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.5); } /* Brillo dorado suave */
+    100% { text-shadow: 0px 0px 30px rgba(255, 255, 255, 1); } /* Brillo blanco intenso */
 }
 
 .rpt_container_info_services h5 {
     font-family: "Tituloh5", sans-serif;
-    font-size: clamp(2rem, 4rem, 6rem);
+    font-size: clamp(1rem, 2rem, 3rem);
     text-align: center;
     color: var(--color-02);
     animation: cambioColor 5s infinite alternate ease-in-out, brillo 3s infinite alternate ease-in-out;
     transition: opacity 1.5s ease-in-out;
     margin: 5px;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5); /* Refuerzo del brillo */
+    text-shadow: 2px 2px 10px rgba(212, 175, 55, 0.5); /* Refuerzo del brillo dorado */
 }
+
+
 
 
 .rpt_container_info_services img{
@@ -134,11 +175,9 @@
 
 }
 
-
-
 .rpt_container_section_third{
     width: 100%;
-    min-height: 40vh;
+    min-height: 30vh !important;
     display: grid;
     place-content: center;
     place-items: center;
@@ -148,6 +187,15 @@
     position:relative; 
     background-attachment:fixed;
     z-index: 10;
+   
+}
+.rpt_container_section_third::before{
+    content: ""; 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    background-color: var(--background-color-04);
 }
 
 .rpt_container_section_third_01{
@@ -181,21 +229,33 @@
 
 
 
+
+
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 768px) {
     /* Ajuste de secciones con fondo fijo para evitar problemas en móviles */
-    .rpt_container_section_second,
-    .rpt_container_section_third {
-        min-height: 30vh;
-        background-attachment: scroll; /* Cambiado a scroll para evitar problemas de rendimiento */
-    }
-    .rpt_container_section_second::before{
+
+  
+    .rpt_container_section_second01::before
+    {
         content: ""; 
-        width: 70%; 
+        width: 60%; 
         height: 100%; 
         position: absolute; 
         top: 0; 
         left: 0; 
+        background-color: var( --background-color-03);
+        /*border-bottom-right-radius: 550px; */
+    }
+    .rpt_container_section_second02::before
+    {
+        content: ""; 
+        width: 60%; 
+        height: 100%; 
+        position: absolute; 
+        top: 0; 
+        right: 0; 
         background-color: var( --background-color-03);
         /*border-bottom-right-radius: 550px; */
     }
@@ -205,7 +265,7 @@
     }
 
     /* Contenedor de información y servicio en disposición vertical */
-    .home-services-ifo {
+    .home-services-ifo-01{
         width: 70%;
         min-height: 100vh;
         position: absolute;
@@ -215,13 +275,33 @@
         place-content: center;
         place-items: center;
     }
+    .home-services-ifo-02 
+    {
+        width: 70%;
+        min-height: 100vh;
+        position: absolute;
+        right: 0;
+        z-index: 0;
+        display: grid;
+        place-content: center;
+        place-items: center;
+    }
 
     .rpt_container_info_services {
-        width: 90%;
+        width: 60%;
         min-height: auto;
         margin: 20px auto;
         padding: 10px;
         text-align: center;
+    }
+    /* Estilo base del ::before */
+    .rpt_container_section_second::before {
+        content: ""; 
+        width: 90% !important; 
+        height: 100%; 
+        position: absolute; 
+        top: 0; 
+        background-color: var(--background-color-05) !important;
     }
 
     .rpt_container_table_services {
@@ -232,7 +312,9 @@
     }
 
     /* Ajuste de tamaños de fuente para mejor legibilidad */
-    .home-services-ifo h2 {
+    .home-services-ifo-01 h2,
+    .home-services-ifo-02 h2 
+    {
         font-size: clamp(2rem, 4vw, 3rem);
     }
 
@@ -243,8 +325,8 @@
 
     /* Ajuste de imágenes para ocupar mayor parte del ancho */
     .rpt_container_info_services img {
-        width: 90%;
-        min-height: 200px;
+        width: 40%;
+        min-height: 40%;
         display: block;
         margin: 0 auto;
     }
