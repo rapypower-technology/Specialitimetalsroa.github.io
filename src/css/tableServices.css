@@ -136,3 +136,12 @@ ul.tabs li a .tab-text {
         font-size: clamp(1rem, 1.4rem, 5rem);
     }
 }
+
+
+
+.tab-link.active {
+    background-color: #f0f0f0; /* Cambia el color de fondo para la pestaña activa */
+    color: #333; /* Cambia el color del texto para la pestaña activa */
+    font-weight: bold; /* Hace el texto en negrita para la pestaña activa */
+    border-bottom: 2px solid #333; /* Agrega un borde inferior para la pestaña activa */
+}

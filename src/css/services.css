@@ -1,0 +1,76 @@
+.cards-container {
+  width: 100%;
+  padding: 80px 0; /* Menos padding en la parte superior e inferior */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cambio: 3 columnas en modo normal */
+  gap: 15px; /* Espacio entre tarjetas */
+  justify-items: center; /* Centrar tarjetas en cada celda */
+}
+
+.card {
+  width: auto; /* Cambio: quitar ancho fijo para distribución automática en 3 columnas */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px; /* Cambio: borde redondeado ajustado */
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Cambio: efecto de transición */
+}
+
+.card:hover {
+  background-color: var(--background-color-03);
+  transform: scale(1.05); /* Cambio: efecto de zoom */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Cambio: agregar sombra */
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: var(--color-01);
+  text-transform: uppercase;
+}
+#serviceContent {
+  padding-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cards-container .card.active {
+  background-color: #ffc107 !important;
+  color: white !important;
+  border-color: #0056b3 !important;
+  border-radius: 25px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .cards-container {
+        /* Reducir el padding para dispositivos móviles */
+        padding: 40px 0;
+        /* Establecer exactamente 3 columnas en modo móvil */
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card {
+        /* Ajustar el tamaño de las tarjetas para que se adapten al nuevo diseño de 3 columnas */
+        width: auto;
+        padding: 5px;
+    }
+    
+    /* Centrar la tarjeta si es la única en el contenedor */
+    .card:only-child {
+        grid-column: 2 / 3;
+    }
+}
+
+.card img {
+  width: 200px;    /* Cambio: ancho fijo */
+  height: 150px;   /* Cambio: alto fijo */
+  object-fit: cover;  /* Ajuste para recorte adecuado */
+  border-radius: 15px; /* Cambio: borde redondeado */
+  box-shadow: 2px 2px 5px red; /* Cambio: sombra */
+}
+.card:hover img{
+  box-shadow: 3px 3px 7px blue; /* Cambio: sombra */
+
+}

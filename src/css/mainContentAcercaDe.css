@@ -18,7 +18,7 @@
 /* Estilos base */
 .about-section {
     padding: 120px 5%;
-    background: var(--background-color-02);
+    background: var(--background-color-01);
     color: var(--color-white);
     position: relative;
     overflow: hidden;

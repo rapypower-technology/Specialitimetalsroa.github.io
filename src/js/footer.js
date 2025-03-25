@@ -1,7 +1,4 @@
-function createFooter() {
-    const footer = document.createElement('footer');
-    footer.classList.add("footer");
-    footer.innerHTML = `
+document.getElementById('footer').innerHTML = `
     <div class="footer-container">
         <div class="footer-section footer-branding fade-in">
             <img src="src/img/company/SiteLogo.webp" alt="Logo de Rapypower" class="footer-logo scale-on-hover">
@@ -46,7 +43,3 @@ function createFooter() {
         <i class="fab fa-whatsapp"></i>
     </a>
     `;
-    return footer;
-}
-
-window.createFooter = createFooter;

@@ -1,5 +1,7 @@
 /* Header */
-.header {
+
+
+#header {
     position: absolute;
     top: 0;
     width: 100%;
@@ -12,13 +14,14 @@
     transition: all 0.4s ease-in-out;
     box-shadow: 0px 4px 10px var(--box-shadow-01);
 }
-.header.scrolled {
+#header.scrolled {
+
     position: fixed;
     background: var(--background-color-02);
     box-shadow: 0px 4px 10px var(--box-shadow-02);
-    padding: 10px 30px;
+    padding: 1px 3px !important;
 }
-.header .container {
+#header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,8 +39,8 @@
     transform: scale(1.1);
 }
 .header.scrolled .logo img{
-    width: 60px;
-    height: 40px;
+    width: 10px !important;
+    height: 10px !important;
 }
 /* Navegación */
 .nav {
@@ -51,7 +54,7 @@
     margin: 0 15px;
 }
 .nav-list a {
-    color: var(--bottom-color-01);
+    color: var(--bottom-color-02);
     text-decoration: none;
     font-size: 16px;
     padding: 8px 12px;
@@ -119,26 +122,22 @@
 /* Responsive */
 @media (max-width: 768px) {
     .nav {
-        background-color: var(--background-color-03) !important;
-        top: 135px !important;
-        transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
-    }
-    .header.scrolled .nav {
-        background-color: var(--background-color-04) !important;
-        top: 72px !important;
-        transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
-    }
-    .nav {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 100%;
         right: 0;
         width: 40%;
-        
-        z-index: 100;
         padding: 15px 0;
         text-align: center;
+        background-color: var(--background-color-05) !important;
+        transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
+        z-index: 100;
+    }
+    #header.scrolled .nav {
+        background-color: var(--background-color-04) !important;
+        top: 100%;
+        transition: background-color 0.5s ease-in-out, top 0.5s ease-in-out;
     }
     .nav.active {
         display: flex;
@@ -168,7 +167,12 @@
     .menu-toggle span {
         background: var(--background-color-02);
     }
-    .header.scrolled  .menu-toggle span {
+    #header.scrolled  .menu-toggle span {
         background: var(--background-color-01);
     }
 }
+
+.anchor {
+    scroll-margin-top: 0; /* Se inicia desde arriba */
+}
+
